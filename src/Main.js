@@ -3,6 +3,8 @@ import Die from "./Die"
 import React from "react"
 
 export default function Main() {
+  const [dice, setDice] = React.useState(allNewDice())
+
   function allNewDice() {
     const randomNum = [];
     for (let i = 0; i < 10; i++) {
@@ -12,14 +14,14 @@ export default function Main() {
     return randomNum
   }
 
-  console.log(allNewDice())
+  const diceElements = dice.map(die => <Die value={die} />)
 
   return (
     <>
       <main>
         <h1 className='title'>Tengame</h1>
         <div className='dices-container'>
-          <Die value={1} />
+          {diceElements}
         </div>
       </main>
     </>
