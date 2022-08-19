@@ -1,4 +1,4 @@
-import './Main.css';
+import './Die.css';
 import React from "react";
 
 export default function Die(props) {
