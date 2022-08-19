@@ -14,6 +14,10 @@ export default function Main() {
           <Die value={3} />
           <Die value={3} />
           <Die value={3} />
+          <Die value={3} />
+          <Die value={3} />
+          <Die value={3} />
+          <Die value={3} />
         </div>
       </main>
     </>
