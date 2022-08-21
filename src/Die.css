@@ -11,3 +11,17 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+.single-dice-touch {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  background-color: #59E391;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -21,7 +21,11 @@ export default function Main() {
     setDice(allNewDice())
   }
 
-  const diceElements = dice.map(die => <Die value={die.value} key={die.key} />)
+  const diceElements = dice.map(die => <Die
+    isHeld={die.isHeld}
+    value={die.value}
+    key={die.key}
+  />)
 
   return (
     <>
