@@ -14,6 +14,11 @@ export default function Main() {
     return randomNum
   }
 
+  function setNewDices() {
+    console.log("blue")
+    setDice(allNewDice())
+  }
+
   const diceElements = dice.map(die => <Die value={die} />)
 
   return (
@@ -23,6 +28,7 @@ export default function Main() {
         <div className='dices-container'>
           {diceElements}
         </div>
+        <button onClick={setNewDices} className='roll-button'>Roll</button>
       </main>
     </>
   )
