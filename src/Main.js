@@ -3,23 +3,25 @@ import Die from "./Die"
 import React from "react"
 
 export default function Main() {
-  const [dice, setDice] = React.useState(allNewDice())
+  const [dice, setDice] = React.useState(allNewDice());
 
   function allNewDice() {
-    const randomNum = [];
+    const randomDiceObj = [];
     for (let i = 0; i < 10; i++) {
-      const num = Math.random() * 6;
-      randomNum.push(Math.ceil(num));
+      randomDiceObj[i] = ({
+        value: Math.ceil(Math.random() * 6),
+        isHeld: false,
+        key: i
+      });
     }
-    return randomNum
+    return randomDiceObj
   }
 
   function setNewDices() {
-    console.log("blue")
     setDice(allNewDice())
   }
 
-  const diceElements = dice.map(die => <Die value={die} />)
+  const diceElements = dice.map(die => <Die value={die.value} key={die.key} />)
 
   return (
     <>
