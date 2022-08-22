@@ -4,6 +4,19 @@ import React from "react"
 
 export default function Main() {
   const [dice, setDice] = React.useState(allNewDice());
+  const [sametem, setSameten] = React.useState(false)
+
+  // In this case use Effect is not used for external effect,
+  // but for keeping two internal states in sync.
+
+  React.useEffect(function () {
+    const allHeld = dice.every(die => die.isHeld);
+    const firstValue = dice[0].value;
+    const allSameValue = dice.every(die => die.value === firstValue);
+    if (allHeld && allSameValue) {
+      console.log("You won!")
+    }
+  }, [dice])
 
   function randomDice(i) {
     return ({
