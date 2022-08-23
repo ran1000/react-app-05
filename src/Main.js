@@ -20,8 +20,6 @@ export default function Main() {
     }
   }, [dice])
 
-  console.log(nanoid)
-
   function randomDice(i) {
     return ({
       value: Math.ceil(Math.random() * 6),
@@ -39,9 +37,14 @@ export default function Main() {
   }
 
   function setNewDices() {
-    setDice(prevDice => prevDice.map(die => {
-      return die.isHeld === false ? randomDice(die.key) : die
-    }))
+    if (!sameten) {
+      setDice(prevDice => prevDice.map(die => {
+        return die.isHeld === false ? randomDice(die.key) : die
+      }))
+    } else {
+      setDice(allNewDice())
+      setSameten(false)
+    }
   }
 
   function holdDice(key) {
