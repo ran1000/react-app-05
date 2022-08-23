@@ -68,7 +68,7 @@ export default function Main() {
         <div className='dices-container'>
           {diceElements}
         </div>
-        <button onClick={setNewDices} className='roll-button'>Roll</button>
+        <button onClick={setNewDices} className='roll-button'>{sameten ? "Play Again" : "Roll"}</button>
       </main>
     </>
   )
