@@ -20,15 +20,17 @@ export default function Die(props) {
     switch (value) {
       case 1:
         return (
-          <div className="dot" ></div>
+          <div className="first-face">
+            <div className="dot" ></div>
+          </div>
         )
         break;
       case 2:
         return (
-          <>
+          <div className="second-face">
             <div className="dot" ></div>
             <div className="dot" ></div>
-          </>
+          </div>
         )
         break;
       case 3:
