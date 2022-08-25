@@ -1,13 +1,13 @@
 main {
   background-color: #F5F5F5;
-  height: 400px;
-  width: 400px;
+  height: 450px;
+  width: 450px;
   max-width: 800px;
   border-radius: 10px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   padding: 20px;
 }
@@ -43,4 +43,13 @@ main {
 
 .roll-button:focus {
   outline: none;
+}
+
+.rolls {
+  color: red;
+  font-weight: 600;
+}
+
+.hidden {
+  visibility: hidden;
 }

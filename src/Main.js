@@ -70,11 +70,11 @@ export default function Main() {
       <main>
         <h1 className='title'>Sameten</h1>
         <p>Roll until they are showing the same number. Click the square to freeze it at its current value between rolls.</p>
-        {sameten && <p className='rools'>You won with {rollsNumber} rools!</p>}
         <div className='dices-container'>
           {diceElements}
         </div>
         <button onClick={setNewDices} className='roll-button'>{sameten ? "Play Again" : "Roll"}</button>
+        <p className={!sameten ? "rolls hidden" : "rolls"} >You won with {rollsNumber} rools!</p>
       </main>
     </>
   )
