@@ -7,6 +7,7 @@ import { nanoid } from "nanoid"
 export default function Main() {
   const [dice, setDice] = React.useState(allNewDice());
   const [sameten, setSameten] = React.useState(false)
+  const [rollsNumber, setRollsNumber] = React.useState(0);
 
   // In this case use Effect is not used for external effect,
   // but for keeping two internal states in sync.
@@ -37,6 +38,7 @@ export default function Main() {
   }
 
   function setNewDices() {
+    setRollsNumber(prevRolls => prevRolls += 1);
     if (!sameten) {
       setDice(prevDice => prevDice.map(die => {
         return die.isHeld === false ? randomDice(die.key) : die
@@ -68,6 +70,7 @@ export default function Main() {
       <main>
         <h1 className='title'>Sameten</h1>
         <p>Roll until they are showing the same number. Click the square to freeze it at its current value between rolls.</p>
+        {sameten && <p className='rools'>You won with {rollsNumber} rools!</p>}
         <div className='dices-container'>
           {diceElements}
         </div>
