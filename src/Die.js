@@ -21,35 +21,37 @@ export default function Die(props) {
       case 1:
         return (
           <div className="first-face">
-            <div className="dot" ></div>
+            <span className="dot" ></span>
           </div>
         )
         break;
       case 2:
         return (
           <div className="second-face">
-            <div className="dot" ></div>
-            <div className="dot" ></div>
+            <span className="dot" ></span>
+            <span className="dot" ></span>
           </div>
         )
         break;
       case 3:
         return (
-          <>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-          </>
+          <div className="third-face">
+            <span className="dot" ></span>
+            <span className="dot" ></span>
+            <span className="dot" ></span>
+          </div>
         )
         break;
       case 4:
         return (
-          <>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-          </>
+          <div className='fourth-face'>
+            <div>
+              <span className="dot" ></span>
+              <span className="dot" ></span>
+            </div>
+            <span className="dot" ></span>
+            <span className="dot" ></span>
+          </div>
         )
         break;
       case 5:
