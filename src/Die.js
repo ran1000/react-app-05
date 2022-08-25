@@ -45,36 +45,48 @@ export default function Die(props) {
       case 4:
         return (
           <div className='fourth-face'>
-            <div>
+            <div className='column'>
               <span className="dot" ></span>
               <span className="dot" ></span>
             </div>
-            <span className="dot" ></span>
-            <span className="dot" ></span>
-          </div>
+            <div className='column'>
+              <span className="dot" ></span>
+              <span className="dot" ></span>
+            </div>
+          </div >
         )
         break;
       case 5:
         return (
-          <>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-          </>
+          <div className='fifth-face'>
+            <div className='column'>
+              <div className="dot" ></div>
+              <div className="dot" ></div>
+            </div>
+            <div className='column'>
+              <div className="dot" ></div>
+            </div>
+            <div className='column'>
+              <div className="dot" ></div>
+              <div className="dot" ></div>
+            </div>
+          </div>
         )
         break;
       case 6:
         return (
-          <>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-            <div className="dot" ></div>
-          </>
+          <div className='fourth-face'>
+            <div className='column'>
+              <span className="dot" ></span>
+              <span className="dot" ></span>
+              <span className="dot" ></span>
+            </div>
+            <div className='column'>
+              <span className="dot" ></span>
+              <span className="dot" ></span>
+              <span className="dot" ></span>
+            </div>
+          </div >
         )
         break;
 
