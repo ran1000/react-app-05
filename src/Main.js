@@ -46,6 +46,7 @@ export default function Main() {
     } else {
       setDice(allNewDice())
       setSameten(false)
+      setRollsNumber(0)
     }
   }
 
