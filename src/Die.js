@@ -24,7 +24,6 @@ export default function Die(props) {
             <span className="dot" ></span>
           </div>
         )
-        break;
       case 2:
         return (
           <div className="second-face">
@@ -32,7 +31,6 @@ export default function Die(props) {
             <span className="dot" ></span>
           </div>
         )
-        break;
       case 3:
         return (
           <div className="third-face">
@@ -41,7 +39,6 @@ export default function Die(props) {
             <span className="dot" ></span>
           </div>
         )
-        break;
       case 4:
         return (
           <div className='fourth-face'>
@@ -55,7 +52,6 @@ export default function Die(props) {
             </div>
           </div >
         )
-        break;
       case 5:
         return (
           <div className='fifth-face'>
@@ -72,7 +68,6 @@ export default function Die(props) {
             </div>
           </div>
         )
-        break;
       case 6:
         return (
           <div className='fourth-face'>
@@ -88,8 +83,6 @@ export default function Die(props) {
             </div>
           </div >
         )
-        break;
-
       default:
         break;
     }
